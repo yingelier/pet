@@ -1,0 +1,177 @@
+/* === 全局基础样式 === */
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", sans-serif;
+  background-color: #0d0d0d;
+  color: #f1f1f1;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #4ac;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Header === */
+.site-header {
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 1px solid #222;
+}
+.site-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.site-header nav a {
+  margin: 0 1rem;
+  color: #bbb;
+}
+.site-header nav a.active,
+.site-header nav a:hover {
+  color: #fff;
+}
+
+/* === 容器 === */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === 首页项目卡片 === */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #1a1a1a;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.7);
+}
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.project-card .overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: #fff;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+/* === 项目页面 === */
+video {
+  width: 100%;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+}
+
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.screenshots img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #4ac;
+}
+
+/* === 动画效果 === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Footer === */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  color: #777;
+  border-top: 1px solid #222;
+  margin-top: 2rem;
+}
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.profile-photo img {
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid #4ac;
+}
+
+.about-text {
+  flex: 1 1 300px;
+  color: #eee;
+}
+
+.about-text h2 {
+  color: #4ac;
+  margin-top: 20px;
+}
+
+.about-text ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.social-links a {
+  color: #4ac;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.resume-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #4ac;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: background 0.3s ease;
+}
+
+.resume-link:hover {
+  background: #38a;
+}
